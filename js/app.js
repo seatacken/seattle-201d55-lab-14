@@ -3,7 +3,7 @@
 // Cart constructor.
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
-  if(items) {
+  if (items) {
     this.items = items;
   } else {
     this.items = [];
@@ -12,7 +12,7 @@ var Cart = function(items) {
 
 Cart.prototype.addItem = function(product, quantity) {
   // Done: Fill in this instance method to create a new CartItem and add it to this.items
-  this.items.push(new CartItem(product,quantity));
+  this.items.push(new CartItem(product, quantity));
 };
 
 Cart.prototype.saveToLocalStorage = function() {
@@ -23,6 +23,7 @@ Cart.prototype.saveToLocalStorage = function() {
 Cart.prototype.removeItem = function(item) {
   // TODO: Fill in this instance method to remove one item from the cart.
   // Note: You will have to decide what kind of parameter to pass in here!
+  cart.items.splice(item, 1);
 };
 
 var CartItem = function(product, quantity) {

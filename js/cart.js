@@ -32,7 +32,7 @@ function showCart() {
     var newRow = document.createElement('tr');
     tableBody.appendChild(newRow);
     var newTd = document.createElement('td');
-    newTd.innerHTML = `<a class="removeItem" href="#">X</a>`;
+    newTd.innerHTML = `<a id="idx${i}" class="removeItem" href="#">X</a>`;
     newRow.appendChild(newTd);
     newTd = document.createElement('td');
     newTd.textContent = cart.items[i].quantity;
@@ -50,9 +50,19 @@ function showCart() {
 }
 
 function removeItemFromCart(event) {
+  event.preventDefault();
   // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+
+  for (var i = 0; i < tableRows.length; i++) {
+    var tableRows = document.getElementsByClassName('removeItem')[i];
+    tableRows[i].document.addEventListener('click', function() {
+      cart.removeItem(i);
+    });
+  }
   // TODO: Save the cart back to local storage
+  cart.saveToLocalStorage();
   // TODO: Re-draw the cart table
+  showCart();
 }
 
 // This will initialize the page and draw the cart on screen

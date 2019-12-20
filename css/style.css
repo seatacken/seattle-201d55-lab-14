@@ -1,1 +1,53 @@
-/* TODO: Make it awesome */
+body {
+  background-color: rgba(104, 142, 212, 0.3);
+}
+h1 {
+  text-align: center;
+  text-size-adjust: 100px;
+  color: blueviolet;
+}
+li {
+  margin: 2px 150px 20px 40px;
+}
+.card h1 {
+  color: fuchsia;
+  animation: pulse 2s infinite alternate;
+  max-width: 400px;
+  margin-left: 80px;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgb(29, 94, 160);
+  }
+  100% {
+    background-color: rgb(54, 191, 255);
+  }
+}
+input:hover {
+  background-color: lightblue;
+}
+th:nth-child(1) {
+  color: red;
+  padding: 35px;
+}
+th:nth-child(2) {
+  color: blue;
+  padding: 35px;
+}
+th:nth-child(3) {
+  color: green;
+  padding: 35px;
+}
+footer {
+  margin-top: 100px;
+}
+img {
+  width: 100px;
+  height: 100px;
+}
+td {
+  border: 2px solid blueviolet;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 2.4rem;
+}
