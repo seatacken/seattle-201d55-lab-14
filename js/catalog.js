@@ -32,7 +32,7 @@ function handleSubmit(event) {
   // Do all the things ...
 
   addSelectedItemToCart();
-  // cart.saveToLocalStorage();
+  cart.saveToLocalStorage();
   updateCounter();
   updateCartPreview();
   document.getElementById('catalog').reset();
